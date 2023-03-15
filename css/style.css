@@ -1,0 +1,277 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+ul li
+{
+    text-decoration: none;
+    list-style: none;
+}
+/*p
+{
+    padding-left: 10px;
+}*/
+
+/* HEADER */
+header
+{
+    width: 100%;
+    height: 650px;
+    background: url('../images/img20.jpg') no-repeat;
+    background-position: center ;
+    background-size: cover;
+    color: white;
+}
+header h1
+{
+    padding-top: 250px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+header nav ul
+{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    display: flex;
+    /*font-size: 1.2rem;
+ 
+    float: right;
+    padding-top: 20px;
+    padding-right: 20px;
+    gap: 20px;
+    text-transform: uppercase;*/
+}
+header nav ul::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s ;
+}
+header nav ul:hover::after
+{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* UNTIL */
+.until
+{
+    width: 90%;
+    height: 200px;
+    background-color: rgba(0, 128, 0, 0.496);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    gap: 50px;
+    margin: 20px auto 50px auto;
+    padding-bottom: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.until img
+{
+    width: 200px;
+    height: 200;
+}
+.until p
+{
+    font-size: 1.2rem;
+}
+#main-idea .presentation
+{
+    width: 50%;
+    padding-left: 50%;
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.presentation img
+{
+    width: 10px;
+    height: 200px;
+}
+.presentation p
+{
+    padding-top: 10px;
+    text-align: center;
+    float: right;
+}
+h2
+{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.presentation img
+{
+    width: 350px;
+    height: 250px;
+}
+.presentation1 ,.presentation2 ,.presentation3 ,.presentation4
+{
+    width: 350px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: none;
+}
+.presentation1:hover ,.presentation2:hover ,.presentation3:hover , .presentation4:hover
+{
+    box-shadow: 0 0 50px 10px grey;
+}
+/* PARTNER */
+.OurPartner
+{
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+.imgPartner
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    gap: 20px;
+}
+.OurPartner img
+{
+    cursor: pointer;
+    padding-top: 20px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+
+}
+.OurPartner h3
+{
+    font-size: 2rem;
+}
+
+
+/*CONTACT*/
+#contact
+{
+    padding: 60px 0;
+    text-align: center;
+}
+h4
+{
+    color: black;
+    font-size: 2rem;
+    width: 400px;
+    text-transform: uppercase;
+    border-bottom: 1px solid green;
+    margin: 0 auto 20px auto;
+    padding-bottom: 20px;
+}
+#contact p
+{
+    padding-top: 20px;
+    font-size: 1.3rem;
+}
+form
+{
+    margin: 60px 0 20px 0;
+}
+label
+{
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #777;
+}
+input[type="text"]
+{
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+    border: 2px solid #ddd;
+    border-radius : 3px;
+}
+input[type="email"]
+{
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+    border: 2px solid #ddd;
+    border-radius : 3px;
+}
+.btn
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 11px;
+    background-color:  rgba(0, 128, 0, 0.496);
+    border-radius: 3px;
+}
+
+
+
+
+footer
+{
+    width: 100%;
+    height: 200px;
+    background:  rgba(0, 128, 0, 0.496);
+    border: 1px solid;
+}
+footer img
+{
+    padding-bottom: 30px;
+    width: 200px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.infoFooter
+{
+    display: flex;
+    float: right;
+    gap: 25px;
+    padding-top: 0;
+}
+h5,h6
+{
+    font-size:1.5rem ;
+}
+/*.border
+{
+    position: relative;
+    border: 1px solid;
+    width: 100%;
+}
+.copyright
+{
+    position: relative;
+    text-align: center;
+    bottom: -75px;
+    font-size: 1.2rem;
+}*/
