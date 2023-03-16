@@ -158,9 +158,9 @@ header p
 /* DASH */
 #dash
 {
-    position: absolute;
-    left: 300px;
-    top: 200px;
+    z-index: auto;
+    margin-left: 300px;
+    margin-top: 150px;
 }
 .general
 {
@@ -201,30 +201,31 @@ header p
 }
 .effTask i
 {
-    position: absolute;
+    z-index: 2;
     font-size: 5rem;
     right: 800px;
     bottom: 270px;
 }
 .budPaie i
 {
-    position: absolute;
+    z-index: 2;
     right: 420px;
     bottom: 270px;
     font-size: 5rem;
 }
 .members i
 {
-    position: absolute;
+    z-index: 2;
     right: 100px;
     bottom: 270px;
     font-size: 5rem;
 }
 .product i
 {
-    position:absolute;
-    right: 790px;
-    bottom: 60px;
+    z-index: 4;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    
     font-size: 5rem;
 }
 .green
@@ -244,10 +245,12 @@ header p
 .action .menuProfil
 {
     position: absolute;
-    background-color: rgba(103, 170, 97, 87);
+    background-color: #D9D9D9;
     top: 80px;
     right: -10px;
     padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 50px;
     width: 200px;
     height: 300px;
     box-sizing: 0 5px 25px rgba(0,0,0,1);
@@ -262,10 +265,7 @@ header p
     opacity: 1;
 
 }
-{
-    visibility: hidden;
-    opacity: 0;
-}
+
 .action .menuProfil::before
 {
     content: "";

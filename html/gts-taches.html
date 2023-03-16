@@ -18,7 +18,7 @@
         <img src="../images/Group 133.png" alt="">
 
         <div class="profil">
-            <div class="profilUser"><img src="../images/userP.jpg" alt=""></div>
+            <div class="profilUser"  onclick="menuToggle();"><img src="../images/userP.jpg" alt=""></div>
         <p>Zack Leroi</p>
         </div>
     </header>
@@ -34,6 +34,20 @@
         <a href="../html/bilan jour.html"> <div class="bilan"><i class="fa-solid fa-square-poll-vertical"></i><p> Bilan</p></div></a>
         <a href="../html/parametres.html"><div class="settings"><i class="fa-solid fa-gears"></i><p> Paramètre</p></div></a>
     </section>
+
+    <div class="action">
+        <div class="menuProfil">
+            <h2>Zack Leroi</h2>
+            <p>ZackLeroi12@gmail.com</p>
+            <ul>
+                <li><i class="fa fa-light fa-circle-user"></i><a href="#">Profil</a></li>
+                <li><i class="fa-solid fa-user-pen"></i><a href="#">Modifier profil</a></li>
+                <li><i class="fa-solid fa-envelope"></i><a href="#">Boite mail</a></li>
+                <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Déconnnexion</a></li>
+            </ul>
+        </div>
+    </div>
+
 
     <div class="steps">
         <ul>
@@ -137,7 +151,13 @@
         </button> 
     </div>-->
 
+    <script>
 
+        function menuToggle(){
+    const togMenu = document.querySelector('.menuProfil')
+    togMenu.classList.toggle("active")
+}
+    </script>
     <script src="../js/ajouer-utilisateur.js"></script>
 </body>
 </html>
