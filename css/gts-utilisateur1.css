@@ -144,11 +144,11 @@ header p
 {
 
 }*/
-.gtsTaskes i
+.gtsTaskes i, .dashbord i
 {
     padding-right: 10px;
 }
-.gtsTaskes p
+.gtsTaskes p, .dashbord p
 {
     padding-right: 45px;
 }
@@ -168,7 +168,7 @@ header p
 {
     padding-right: 80px;
 }
-.settings,.gtsTaskes,.bilan
+.settings,.gtsTaskes,.bilan,.dashbord
 {
     font-size: 1.2rem;
     width: 250px;
@@ -191,7 +191,7 @@ header p
     text-align: center;
     border: 1px  solid;
 }
-.settings:hover,.gtsTaskes:hover,.bilan:hover
+.settings:hover,.gtsTaskes:hover,.bilan:hover,.dashbord:hover
 {
     width: 250px;
     height: 70px;
@@ -201,6 +201,12 @@ header p
     justify-content: center;
     align-items: center;
     border: 1px  solid;
+}
+.logOut
+{
+    position: absolute;
+    bottom: -150px;
+    margin-left: 70px;
 }
 .listElement
 {

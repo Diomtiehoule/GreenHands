@@ -1,0 +1,355 @@
+/* GENERALE */
+*
+{
+    margin:0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+#user
+{
+    padding-right: 20px;
+}
+#users
+{
+    position: absolute;
+    right: 820px;
+    padding-left: 90px;
+}
+#contacts
+{
+    position: absolute;
+    right: 520px;
+    text-align: center;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+#contact
+{
+    padding-right: 110px;
+}
+#counts
+{
+    position: absolute;
+    right: 350px;
+    padding-right: 0px;
+}
+#count
+{
+    padding-right: 110px;
+}
+
+.option
+{
+    position: absolute;
+    right: 100px;
+    font-size: .7rem;
+    display: flex;
+    gap: 10px;
+}
+.modif
+{
+
+    padding-top: 3px;
+    border: 1px solid black;
+    background-color: gray;
+    height: 25px;
+}
+.delete
+{
+    padding-top: 3px;
+    border: 1px solid black;
+    background-color: rgb(224, 58, 58);
+    height: 25px;
+    text-align: center;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+ul li
+{
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    font-size: 1.3rem;
+    float: left;
+    position: relative;
+    left: -230px;
+    padding-top: 20px;
+    margin-right: 5px;
+}
+.steps
+{
+    display: inline;
+
+}
+
+/* HEADER */
+header
+{
+    width: 100%;
+    height: 100px;
+    background-color: #D9D9D9;
+}
+header img
+{
+    padding-left: 10px;
+    padding-top: 20px;
+    height: 65px;
+    width: 200px;
+}
+.profil
+{
+    display: flex;
+    float: right;
+    margin-right: 50px;
+}
+.profilUser img
+{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: black;
+    margin-top: 12px;
+}
+header p
+{
+    margin-top: 35px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+
+/* MENU-BARRE-LEFT */
+#menuBarreLeft
+{
+    float: left;
+    height: 100%;
+    
+}
+.menu
+{
+    width: 250px;
+    height: 100vh;
+    margin-top: 70px;
+    background-color: #D9D9D9;
+}
+.menu i
+{
+    font-size: 2rem;
+    padding-right: 10px;
+}
+/*.gtsUser i
+{
+
+}*/
+.gtsTaskes i, .dashbord i
+{
+    padding-right: 10px;
+}
+.gtsTaskes p, .dashbord p
+{
+    padding-right: 45px;
+}
+.bilan i
+{
+    padding-right: 10px;
+}
+.bilan p
+{
+    padding-right: 110px;
+}
+.settings i
+{
+    padding-right: 10px;
+}
+.settings p
+{
+    padding-right: 80px;
+}
+.settings,.gtsTaskes,.gtsUser,.dashbord
+{
+    font-size: 1.2rem;
+    width: 250px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*text-align: center;*/
+    border: 1px  solid;
+}
+.bilan
+{
+    font-size: 1.2rem;
+    width: 250px;
+    height: 70px;
+    display: flex;
+    background: rgba(103, 170, 97, 87);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px  solid;
+}
+.settings:hover,.gtsTaskes:hover,.gtsUser:hover,.dashbord:hover
+{
+    width: 250px;
+    height: 70px;
+    display: flex;
+    background: rgba(103, 170, 97, 8
+    );
+    justify-content: center;
+    align-items: center;
+    border: 1px  solid;
+}
+.logOut
+{
+    position: absolute;
+    bottom: -150px;
+    margin-left: 70px;
+}
+.listElement
+{
+    margin-top: 130px;
+    margin-left: 300px;
+    display: flex;
+    gap: 100px;
+
+}
+.listElement p
+{
+    color: rgba(103, 170, 97, 87);
+}
+.listElement p a:hover:last-child
+{
+    color: rgba(103, 170, 97, 87);
+    cursor: pointer;
+}
+.listElement p
+{
+    font-size: 1.3rem;
+}
+.border
+{
+    margin-left: 300px;
+    margin-top: 25px;
+    width: 1000px;
+    border: 1px solid black;
+}
+.special
+{
+    padding-left: 300px;
+    padding-top: 80px;
+    font-size: 1.5rem;
+}
+.resultTask
+{
+    position: absolute;
+    top: 400px;
+    left: 300px;
+    width: 1000px;
+    height: 200px;
+    background-color: #D9D9D9;
+}
+.resultTask p
+{
+    padding-top: 20px ;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+.elem
+{
+    display: flex;
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: space-between;
+}
+.green, .cercle
+{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: white;
+    border: 5px solid green;
+}
+.orange
+{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: white;
+    border: 5px solid #E5730A;
+}
+.red
+{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: white;
+    border: 5px solid #F11C1C;
+}
+.green p, .orange p, .red p
+{
+    text-align: center;
+    align-items: center;
+    padding-top: 25px;
+    font-size: 3.0rem;
+}
+#members-paie
+{
+    position: absolute;
+    left: 300px;
+    top: 670px;
+    display: flex;
+    gap: 150px;
+}
+.member
+{
+    width: 150px;
+    height: 150px;
+    background-color: #D9D9D9;
+    text-align: center;
+}
+.cercle
+{
+    padidng-top: 20px;
+    margin-left: 10px;
+    
+}
+.cercle p
+{
+    font-size: 3.5rem;
+    padding-top: 25px;
+}
+.special2
+{
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+.paie
+{
+    width: 700px;
+    height: 150px;
+    background-color: #D9D9D9;
+}
+.paie p
+{
+    font-size: 1.2rem;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.special1
+{
+    font-size: 1.3rem;
+    position: absolute;
+    left: 5px;
+    top: -30px;
+
+}
+.special2
+{
+    position: absolute;
+    right: 600px;
+    top: -30px;
+}
+

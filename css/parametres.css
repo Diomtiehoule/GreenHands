@@ -82,15 +82,12 @@ header p
     font-size: 2rem;
     padding-right: 10px;
 }
-.gtsUser i
-{
 
-}
-.gtsTaskes i
+.gtsTaskes i, .dashbord  i
 {
     padding-right: 10px;
 }
-.gtsTaskes p
+.gtsTaskes p, .dashbord p
 {
     padding-right: 45px;
 }
@@ -110,7 +107,7 @@ header p
 {
     padding-right: 80px;
 }
-.gtsUser,.gtsTaskes,.bilan
+.gtsUser,.gtsTaskes,.bilan,.dashbord
 {
     font-size: 1.2rem;
     width: 250px;
@@ -133,7 +130,7 @@ header p
     text-align: center;
     border: 1px  solid;
 }
-.gtsUser:hover,.gtsTaskes:hover,.bilan:hover
+.gtsUser:hover,.gtsTaskes:hover,.bilan:hover,.dashbord:hover
 {
     width: 250px;
     height: 70px;

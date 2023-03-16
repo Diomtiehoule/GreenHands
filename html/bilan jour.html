@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/gts-utilisateur2.css">
+    <link rel="stylesheet" href="../css/bilan jour.css">
     <link rel="stylesheet" href="">
     <title>Green Hands</title>
 </head>
@@ -18,26 +18,30 @@
         <img src="../images/Group 133.png" alt="">
 
         <div class="profil">
-            <div class="profilUser"></div>
+            <div class="profilUser"><img src="../images/userP.jpg" alt=""></div>
         <p>Zack Leroi</p>
         </div>
     </header>
 
     <section id="menuBarreLeft">
+           
         <div class="menu">
-            <a href="../html/Tableau de bord.html"><div class="dashbord"><p>Tableau de bord</p></div></a>
-            <div class="gtsUser"><i class="fa-solid fa-users-line"></i><p> Gestion utilisateurs</p></div>
+            <a href="../html/Tableau de bord.html"><div class="dashbord"><p>Tableau de bord</p></div></a> 
+            <a href="../html/gts-utilisateur1.html"><div class="gtsUser"><i class="fa-solid fa-users-line"></i><p> Gestion utilisateurs</p></div></a> 
         <a href="../html/gts-taches.html"><div class="gtsTaskes"><i class="fa-solid fa-list-check"></i><p> Gestion taches</p></div></a>
         <div class="bilan"><i class="fa-solid fa-square-poll-vertical"></i><p> Bilan</p></div>
         <a href="../html/parametres.html"><div class="settings"><i class="fa-solid fa-gears"></i><p> Paramètre</p></div></a>
+
+        <p class="logOut">Deconnexion</p>
+        
     </section>
 
     <div class="steps">
         <ul>
             <li><a href="../html/index.html"> Accueil </a><i class="fa-solid fa-chevron-right"></i></li>
             <li>Administrateur <i class="fa-solid fa-chevron-right"></i></li>
-            <li><a href="../html/gts-utilisateur1.html"> Gestion utilisateurs <i class="fa-solid fa-chevron-right"></i></a></li>
-            <li>Liste des administrateurs</li>
+            <li>bilan <i class="fa-solid fa-chevron-right"></i></li>
+            <li>bilan jour</li>
         </ul>
     </div>
 
@@ -70,59 +74,52 @@
                 <button type="submit" class="button">Ajouter</button>-->
 
     <div class="listElement">
-        <p><a href="..//html/gts-utilisateur1.html"> Liste travailleurs</p></a>
-        <p>Liste des administrateurs</p>
+        <p>Bilan (jour)</p>
+        <p><a href="../html/bilan semaine.html">Bilan (semaine)</a></p>
+        <p><a href="../html/bilan mois.html">Bilan (mois)</a> </p>
     </div>
     <div class="border"></div>
-    
-    <div class="array">
 
-        <div class="attribut">
-            <p id="users">Nom prenom(s)</p>
-            <p id="contacts">Adresse email</p>
-            <p id="counts">Mot de passe</p>
-            <p id="actions">Action</p>
+    <section id="Tasks">
+    <p class="special">Resultat des taches</p>
+    <div class="resultTask">
+        <div class="elem">
+        <div class="done">
+            <p style="padding-left: 40px;">Fini</p>
+            <div class="green">
+                <p style="color: green"> 3/6</p>
+            </div>
+
+        </div>
+        <div class="enCour">
+                <p style="padding-left: 20px;">en cours</p>
+                <div class="orange">
+                    <p style="color:orange"> 1/6</p>
+                </div>
         </div>
 
-        <div class="attributs">
-            <p id="user">Diomande Haroun</p>
-            <p id="contact">Dh@gmail.com</p>
-            <p id="count">*****</p>
-            <p id="action"><div class="option">
-                <div class="left">modifier</div>
-                <div class="right">supprimer</div>
-            </div></p>
+        <div class="nope">
+                <p>Non executé</p>
+                <div class="red">
+                    <p style="color:red"> 2/6</p>
+                </div>
         </div>
+    </div>
+    </div>
+</section>
 
-        <div class="attributs">
-            <p id="users">Karenzih Sara</p>
-            <p id="contacts">Ks@gmail.com</p>
-            <p id="counts">*****</p>
-            <p id="actions"><div class="option">
-                <div class="left">modifier</div>
-                <div class="right">supprimer</div>
-            </div></p>
-        </div>
-
-        <div class="attributs">
-            <p id="users">Sanogo Abou</p>
-            <p id="contacts">Sa@gmail.com</p>
-            <p id="counts">*****</p>
-            <p id="actions"><div class="option">
-                <div class="left">modifier</div>
-                <div class="right">supprimer</div>
-            </div></p>
-        </div>
-
+<section id="members-paie">
+    <p class="special1">Travailleurs actifs</p>
+    <div class="member">
+        <div class="cercle"><p style="color:green">4</p></div>
     </div>
 
-    <div class="border2"></div>
-
-    <div class="registerUser" class="addUser">
-        <button class="button">
-            Inscrire un utilisateur
-        </button> 
+    <p class="special2">Salaires</p>
+    <div class="paie">
+        <p>-Salaire Payé : 8.000frs</p>
+        <p>- Salaire en suspend : 20.000frs</p>
     </div>
+</section>
 
 
     <script src="../js/ajouer-utilisateur.js"></script>
