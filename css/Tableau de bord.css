@@ -13,6 +13,7 @@ ul
     padding-left: 20px;
     list-style: none;
     display: flex;
+    font-size: 1.3rem;
 }
 a
 {
@@ -84,8 +85,13 @@ header p
 {
 
 }*/
-.gtsTaskes i, .dashbord i
+.gtsTaskes i
 {
+    padding-right: 10px;
+}
+.dashbord i
+{
+    padding-left: 20px;
     padding-right: 10px;
 }
 .gtsTaskes p, .dashbord p
@@ -180,16 +186,138 @@ header p
     padding-top: 40px;
     font-size: 1.5rem;
 }
-.effTask ,.budPaie ,.members
+.fourth p
+{
+    padding-left: 20px;
+    padding-top: 40px;
+    font-size: 1.5rem;
+}
+.effTask ,.budPaie ,.members,.product
 {
     margin-bottom: 5px;
     width: 300px;
     height: 150px;
     background-color: #D9D9D9;
 }
+.effTask i
+{
+    position: absolute;
+    font-size: 5rem;
+    right: 800px;
+    bottom: 270px;
+}
+.budPaie i
+{
+    position: absolute;
+    right: 420px;
+    bottom: 270px;
+    font-size: 5rem;
+}
+.members i
+{
+    position: absolute;
+    right: 100px;
+    bottom: 270px;
+    font-size: 5rem;
+}
+.product i
+{
+    position:absolute;
+    right: 790px;
+    bottom: 60px;
+    font-size: 5rem;
+}
 .green
 {
     width: 300px;
     height: 16px;
     background: rgba(103, 170, 97, 87);
+}
+
+/*DROPMENU*/
+.action
+{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+.action .menuProfil
+{
+    position: absolute;
+    background-color: rgba(103, 170, 97, 87);
+    top: 80px;
+    right: -10px;
+    padding: 10px 20px;
+    width: 200px;
+    height: 300px;
+    box-sizing: 0 5px 25px rgba(0,0,0,1);
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.action .menuProfil.active
+{
+    visibility: visible;
+    opacity: 1;
+
+}
+{
+    visibility: hidden;
+    opacity: 0;
+}
+.action .menuProfil::before
+{
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 28px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+.action .menuProfil h2
+{
+    width: 100px;
+    font-size: 18px;
+    padding: 20px 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2rem;
+}
+.action ul
+{
+    display: inline;
+    font-size: 1.2rem;
+}
+.action .menuProfil ul li
+{
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+}
+.action .menuProfil ul li i
+{
+    max-width: 20px;
+    margin-right: 20px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.action .menuProfil ul li:hover i
+{
+    opacity: 1;
+}
+.action .menuProfil ul li a
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.action .menuProfil ul li:hover a
+{
+    color: rgba(103, 170, 97, 87);
 }

@@ -144,8 +144,13 @@ header p
 {
 
 }*/
-.gtsTaskes i, .dashbord i
+.gtsTaskes i
 {
+    padding-right: 10px;
+}
+.dashbord i
+{
+    padding-left: 20px;
     padding-right: 10px;
 }
 .gtsTaskes p, .dashbord p
