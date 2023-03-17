@@ -88,22 +88,24 @@
             <p id="users1">Diomande Haroun</p>
             <p id="contacts1">Dh@gmail.com</p>
             <p id="counts1">*****</p>
-            <p id="action1">
+            <p id="actions1">
                 <div class="option"  id="option1">
-                <div class="left"  id="left1">modifier</div>
-                <div class="right"  id="right1">supprimer</div>
-            </div>
-        </p>
+                    <div class="left"  id="left1">modifier</div>
+                    <div class="right"  id="right1">supprimer</div>
+                </div>
+            </p>
         </div>
 
         <div class="attributs"  id="attribut2">
             <p id="users2">Karenzih Sara</p>
             <p id="contacts2">Ks@gmail.com</p>
             <p id="counts2">*****</p>
-            <p id="actions"><div class="option"  id="option2">
-                <div class="left" id="left2">modifier</div>
-                <div class="right"  id="right2">supprimer</div>
-            </div></p>
+            <p id="actions2">
+                <div class="option"  id="option2">
+                    <div class="left" id="left2">modifier</div>
+                    <div class="right"  id="right2">supprimer</div>
+                </div>
+            </p>
         </div>
 
         <div class="attributs"  id="attribut3">
@@ -112,10 +114,10 @@
             <p id="counts3">*****</p>
             <p id="actions3">
                 <div class="option" id="option3">
-                <div class="left" id="left3">modifier</div>
-                <div class="right" id="right3">supprimer</div>
-            </div>
-        </p>
+                    <div class="left" id="left3">modifier</div>
+                    <div class="right" id="right3">supprimer</div>
+                </div>
+            </p>
         </div>
 
     </div>
@@ -143,7 +145,6 @@
 
         function supprimer (e){
             document.getElementById(e.target.id.replace("right","attribut")).remove()
-            console.log(e.target.id)
         }
 
         modif.forEach(key=>{
@@ -156,17 +157,14 @@
                 const btnAnnuler = document.querySelector('.annuler')
 
                 var inpValName = document.getElementById(btnAnnuler.id.replace('annuler','nom')).value;
-                console.log(document.getElementById(btnAnnuler.id.replace('annuler','nom')));
                 document.getElementById(btnAnnuler.id.replace('annuler','nom')).remove();
                 document.getElementById(btnAnnuler.id.replace('annuler','users')).textContent=inpValName;
 
                 var inpValEmail = document.getElementById(btnAnnuler.id.replace('annuler','email')).value;
-                console.log(document.getElementById(btnAnnuler.id.replace('annuler','email')));
                 document.getElementById(btnAnnuler.id.replace('annuler','email')).remove();
                 document.getElementById(btnAnnuler.id.replace('annuler','contacts')).textContent=inpValEmail;
 
                 var inpValMotPass = document.getElementById(btnAnnuler.id.replace('annuler','motPass')).value;
-                console.log(document.getElementById(btnAnnuler.id.replace('annuler','motPass')));
                 document.getElementById(btnAnnuler.id.replace('annuler','motPass')).remove();
                 document.getElementById(btnAnnuler.id.replace('annuler','counts')).textContent=inpValMotPass;
 
@@ -178,15 +176,14 @@
 
                 let btnModif = document.createElement('button')
                 btnModif.id=btnAnnuler.id.replace('annuler','left')
-                btnModif.className='left'
-                btnModif.textContent='modifier'
+                btnModif.className='left';
+                btnModif.textContent='modifier';
+                btnModif.addEventListener('click', modifier)
                 const opt = document.getElementById(btnAnnuler.id.replace('annuler','option'));
-                opt.append(btnModif)
+                opt.append(btnModif);
                 opt.append(supp)
-                document.getElementById(btnAnnuler.id.replace('annuler','left')).remove()
+                document.getElementById(btnAnnuler.id.replace('annuler','envoyer')).remove()
                 btnAnnuler.remove()
-                
-                
                 
             }
             let nom =  document.getElementById(e.target.id.replace('left',"users"));
@@ -211,10 +208,10 @@
             document.getElementById(e.target.id.replace('left','counts')).append(inputMotPass)
 
             const envoyer = document.createElement('div')
-            envoyer.className=e.target.id.replace('left','envoyer')
+            envoyer.className='envoyer'
             envoyer.id=e.target.id.replace('left','envoyer')
             envoyer.textContent="envoyer";
-
+            console.log(envoyer)
             var option = document.getElementById(e.target.id.replace('left','option'))
             option.append(envoyer)
 

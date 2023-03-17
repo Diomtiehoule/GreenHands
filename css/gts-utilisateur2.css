@@ -26,7 +26,23 @@
 {
     padding-top: 3px;
     border: 1px solid black;
-    background-color: gray;
+    background-color: rgb(138, 145, 209);
+    height: 25px;
+    color: white;
+}
+.envoyer
+{
+    padding-top: 3px;
+    border: 1px solid black;
+    background-color: rgba(103, 170, 97, 87);
+    height: 25px;
+}
+.annuler
+{
+    padding-top: 3px;
+    border: 1px solid black;
+    background-color: #231d1d;
+    color: white;
     height: 25px;
 }
 .right
