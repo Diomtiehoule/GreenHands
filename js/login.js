@@ -19,9 +19,9 @@ submit_button.onclick = (e) => {
         pass : 'ZackLeroi12'
     }
     if( email == '' && pass == ''){
-        swal("Ops...)", "veuillez saisir tout les champs", "error");
+        swal("Ops...", "veuillez saisir tout les champs", "error");
     }else if(email == "" || pass == ""){
-        swal("Ops...)", "veuillez remplir le champs", "error");
+        swal("Ops...", "veuillez remplir le champs", "error");
     }else if(email == "ZackLeroi12@gmail.com" && pass == "ZackLeroi12") {
         
         swal("Authentification confirmée", "Bienvenue super admin", "success");
@@ -30,7 +30,7 @@ submit_button.onclick = (e) => {
         getElementByName('gts_utilisateur1.html')
 
     }else if( email != superAdmin.email || pass != superAdmin.pass){
-        swal("Ops...)", "Utilisateur inconnu", "error");
+        swal("Ops...", "Utilisateur inconnu", "error");
     }
 }
  function superAdminZone(){

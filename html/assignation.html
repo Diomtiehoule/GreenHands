@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/assignation.css">
+    <title>Green Hands</title>
+</head>
+<body>
+
+    
+                    
+
+    <header>
+        <img src="../images/Group 133.png" alt="">
+
+        <div class="profil">
+            <div class="profilUser">
+                <img src=""></div>
+        <p>Zack Leroi</p>
+        </div>
+    </header>
+
+    <section id="menuBarreLeft">
+           
+        <div class="menu">
+            <a href="../html/Tableau de bord.html"><div class="dashbord"><i class="fa-solid fa-table-columns"></i><p>Tableau de bord</p></div></a> 
+            <a href="../html/gts-utilisateur1.html"><div class="gtsUser"><i class="fa-solid fa-users-line"></i><p> Gestion utilisateurs</p></div></a> 
+        <a href="../html/gts-taches.html"><div class="gtsTaskes"><i class="fa-solid fa-list-check"></i><p> Gestion taches</p></div></a>
+        <a href="../html/bilan jour.html"><div class="bilan"><i class="fa-solid fa-square-poll-vertical"></i><p> Bilan</p></div></a> 
+        <a href="../html/parametres.html"><div class="settings"><i class="fa-solid fa-gears"></i><p> Paramètre</p></div></a>
+
+        <p class="logOut">Deconnexion</p>
+        
+    </section>
+
+    <div class="steps">
+        <ul>
+            <li><a href="../html/index.html"> Accueil </a><i class="fa-solid fa-chevron-right"></i></li>
+            <li>Administrateur <i class="fa-solid fa-chevron-right"></i></li>
+            <a href="../html/gts-taches.html"><li>Gestion taches<i class="fa-solid fa-chevron-right"></i></li></a> 
+            <li>Assignation</li>
+        </ul>
+    </div>
+
+
+    <div class="listElement">
+        <p><a href="../html/gts-taches.html">Liste taches actif</a></p>
+        <p class="assign">Assignation</p>
+        <p><a href="../html/gts-taches2.html">Etat</a></p>
+    </div>
+    <div class="border"></div>
+    
+    <div class="array" id="array">
+
+        <div class="attribut">
+            <p id="travailleur">Travailleurs</p>
+            <p id="nombreTaches">Nbr taches</p>
+            <p id="taches">taches</p>
+            <p id="remuneration">type renumeration</p>
+            <p id="action">Action</p>
+        </div>
+
+    </div>
+
+    <section id="form_user">
+
+        <h2>Assigner une tache</h2>
+        <form action="">
+
+        <div class="single_input">
+            <input type="text" name="nom" class="user" id="nomUser" placeholder=" Nom travailleur">
+        </div>
+
+        <div class="single_input">
+            <input type="number" name="nombre tache" class="nbrsTaske" id="nbrsTaskes" placeholder="Nombre de tache assignée(s)">
+        </div>
+        
+        <div class="single_input">
+            <input type="text" name="taches" class="taske" id="taskes" placeholder="Description(s)">
+        </div>
+
+        <div class="single_input">
+            <input type="text" name="renumeration" class="remun" id="remuns" placeholder="Type de remuneration">
+        </div>
+
+        <div class="button">
+            <button class="button" id="submit" type="button">envoyer</button>
+        </div>
+    </form>
+
+    </section>
+
+    <div class="border2"></div>
+
+    <div class="registerUser" class="addUser" onclick="formToggle();">
+        <button class="button" >
+            Assigner tache(s)
+        </button> 
+    </div>
+
+<script>
+    function formToggle(){
+        const formTog = document.querySelector('#form_user')
+        
+        formTog.classList.toggle('active')
+        }
+</script>
+    
+    <script src="../js/utilisateur.js"></script>
+    <script src="../js/assignation.js"></script>
+
+<!--<script src="../js/ajouer-utilisateur.js"></script>-->
+</body>
+</html>

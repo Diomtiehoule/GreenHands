@@ -1,53 +1,60 @@
 document.getElementById('submit').addEventListener('click', user_save)
 
 function user_save(){
-    const nom = document.getElementById('nomUser')
-    const contact = document.getElementById('contactUser')
-    const compte = document.getElementById('compteUser')
+    const nom = document.getElementById('travailleur')
+    const nbrTaches = document.getElementById('nombreTaches')
+    const taches = document.getElementById('nombreTaches')
+    const Descrip = document.getElementById('taches')
+    const remuneration = document.getElementById('remuneration')
 
     const tab = [];
     const objEmpl = {
         id : "",
         nom : nom.value,
-        contact : contact.value,
-        compte : compte.value,
+        nombre_tache : nbrTaches.value,
+        taches : Descrip.value,
+        remuneration : remuneration.value,
         statut : 1,
     }
 
-    const dataEmpl = localStorage.getItem('employes');
+    const dataEmpl = localStorage.getItem('administrateurs');
     let tabJ = JSON.parse(dataEmpl);
     if(!dataEmpl){
-        objEmpl.id='Tr1';
+        objEmpl.id='Admin1';
         tab.push(objEmpl);
-        localStorage.setItem('employes',JSON.stringify(tab))
+        localStorage.setItem('administrateurs',JSON.stringify(tab))
     }else{
         
-        objEmpl.id="Tr"+(tabJ.length+1);
+        objEmpl.id="Admin"+(tabJ.length+1);
         tabJ.push(objEmpl);
-        localStorage.setItem("employes",JSON.stringify(tabJ));
+        localStorage.setItem("administrateurs",JSON.stringify(tabJ));
 
         
 
     }
     const line = document.createElement('div');
         line.className='attributs';
-        line.id='attribut'+objEmpl.id.replace('Tr','');
+        line.id='attribut'+objEmpl.id.replace('Admin','');
         const idt = document.createElement('p')
         idt.id="ids"+(tabJ.length+1);
         idt.textContent=objEmpl.id
         line.append(idt)
-        const user = document.createElement('p')
-        user.id='users'+(tabJ.length+1);
-        user.textContent=objEmpl.nom
-        line.append(user)
-        const contacts = document.createElement('p')
-        contacts.id='contacts'+(tabJ.length+1);
-        contacts.textContent=objEmpl.contact
-        line.append(contacts)
-        const count = document.createElement('p')
-        count.id='counts'+(tabJ.length+1);
-        count.textContent=objEmpl.compte
-        line.append(count)
+        const nomT = document.createElement('p')
+        nomT.id='travailleur'+(tabJ.length+1);
+        nomT.textContent=objEmpl.nom
+        line.append(nom)
+        const nbrT_T = document.createElement('p')
+        nbrT_T.id='nombreTaches'+(tabJ.length+1);
+        nbrT_T.textContent=objEmpl.nombre_tache
+        line.append(nbrT_T)
+        const task = document.createElement('p')
+        task.id='taches'+(tabJ.length+1);
+        task.textContent=objEmpl.taches
+        line.append(task)
+        const remuns = document.createElement('p')
+        remuns.id='remuneration'+(tabJ.length+1);
+        remuns.textContent=objEmpl.remuneration
+        line.append(remuns)
         const action = document.createElement('p')
         action.id='action'+(tabJ.length+1);
         line.append(action)
@@ -69,13 +76,13 @@ function user_save(){
 
 }
 
-const  selectUer =JSON.parse(localStorage.getItem('employes'))
+const  selectUer =JSON.parse(localStorage.getItem('administrateurs'))
 function affiche(params){
     if((params.length != 0)){
         params.forEach(element => {
             const line = document.createElement('div');
             line.className='attributs';
-            line.id='attribut'+element.id.replace('Tr','');
+            line.id='attribut'+element.id.replace('Admin','');
             const idt = document.createElement('p')
             idt.id="ids"+element.id
             idt.textContent=element.id

@@ -18,7 +18,8 @@
         <img src="../images/Group 133.png" alt="">
 
         <div class="profil">
-            <div class="profilUser"><img src="../images/userP.jpg" alt=""></div>
+            <div class="profilUser" onclick="menuToggle();">
+                <img src="../images/photo de user.jpg"></div>
         <p>Zack Leroi</p>
         </div>
     </header>
@@ -36,6 +37,18 @@
         
     </section>
 
+    <div class="action">
+        <div class="menuProfil">
+            <h2>Zack Leroi</h2>
+            <p>ZackLeroi12@gmail.com</p>
+            <ul>
+                <li><i class="fa fa-light fa-circle-user"></i><a href="#">Profil</a></li>
+                <li><i class="fa-solid fa-user-pen"></i><a href="#">Modifier profil</a></li>
+                <li><i class="fa-solid fa-envelope"></i><a href="#">Boite mail</a></li>
+                <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Déconnnexion</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="steps">
         <ul>
             <li><a href="../html/index.html"> Accueil </a><i class="fa-solid fa-chevron-right"></i></li>
@@ -123,13 +136,13 @@
         </button> 
     </div>
 
-<script>
-    function formToggle(){
-        const formTog = document.querySelector('#form_user')
-        
-        formTog.classList.toggle('active')
-        }
-</script>
+    <script>
+
+        function menuToggle(){
+    const togMenu = document.querySelector('.menuProfil')
+    togMenu.classList.toggle("active")
+}
+    </script>
     
     <script src="../js/utilisateur.js"></script>
 
