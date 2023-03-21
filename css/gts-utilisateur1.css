@@ -494,6 +494,20 @@ header p
    text-align: center;
    background-color: rgba(103, 170, 97, 87);
    margin-left: 200px;
+   visibility: hidden;
+   transition: 0.2s;
+}
+#form_user.active
+{
+    width: 600px;
+    position: absolute;
+    top: 250px;
+   height: 500px;
+   display: inline; 
+   text-align: center;
+   background-color: rgba(103, 170, 97, 87);
+   margin-left: 200px;
+   visibility: visible;
 }
 #form_user h2
 {
