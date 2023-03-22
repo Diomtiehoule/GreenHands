@@ -90,13 +90,10 @@ header img
     float: right;
     margin-right: 50px;
 }
-.profilUser img
+.profilUser i
 {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    background-color: black;
-    margin-top: 12px;
+    font-size: 2rem;
+    padding-top: 30px;
 }
 header p
 {

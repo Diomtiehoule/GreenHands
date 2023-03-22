@@ -105,13 +105,10 @@ header img
     float: right;
     margin-right: 50px;
 }
-.profilUser img
+.profilUser i
 {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    background-color: black;
-    margin-top: 12px;
+    padding-top: 30px;
+    font-size: 2rem;
 }
 header p
 {
@@ -153,11 +150,11 @@ header p
     padding-left: 20px;
     padding-right: 10px;
 }
-.gtsTaskes p, .dashbord p
+.gtsTaskes p, .dashbord p, .compta p
 {
     padding-right: 45px;
 }
-.bilan i
+.bilan i, .compta i
 {
     padding-right: 10px;
 }
@@ -173,7 +170,7 @@ header p
 {
     padding-right: 80px;
 }
-.settings,.gtsTaskes,.gtsUser,.dashbord
+.settings,.gtsTaskes,.gtsUser,.dashbord, .compta
 {
     font-size: 1.2rem;
     width: 250px;
@@ -196,7 +193,7 @@ header p
     text-align: center;
     border: 1px  solid;
 }
-.settings:hover,.gtsTaskes:hover,.gtsUser:hover,.dashbord:hover
+.settings:hover,.gtsTaskes:hover,.gtsUser:hover,.dashbord:hover,.compta:hover
 {
     width: 250px;
     height: 70px;

@@ -119,10 +119,12 @@ function formToggle(){
 
   const button = document.querySelector('#submit')
     button.addEventListener('click', () =>{
-        if(nom != true && taches != true && remuneration != true){
+        if(nom =="" || taches =="" || remuneration ==""){
+            return false;
+        }else if(nom && taches && remuneration)
+        {
             swal("Payement éffectué", "Salaire versé au travailleur", "success");
             formTog.classList.remove('active')
-            formTog.style.transition = '0.2s'
         }      
     })
     }
