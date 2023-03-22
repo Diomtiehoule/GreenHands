@@ -114,11 +114,11 @@
         </div>
 
         <div class="single_input">
-            <input type="number" name="contact" class="contact" id="contactUser" placeholder="contact travailleur">
+            <input type="tel" name="contact" class="contact" id="contactUser" placeholder="contact travailleur">
         </div>
         
         <div class="single_input">
-            <input type="number" name="compte" class="count" id="compteUser" placeholder="compte du travailleur">
+            <input type="tel" name="compte" class="count" id="compteUser" placeholder="compte du travailleur">
         </div>
 
         <div class="button">
@@ -137,15 +137,13 @@
     </div>
 
     <script>
-
-        function menuToggle(){
-    const togMenu = document.querySelector('.menuProfil')
-    togMenu.classList.toggle("active")
-}
+        function formToggle(){
+            const formTog = document.querySelector('#form_user')
+            
+            formTog.classList.toggle('active')
+            }
     </script>
-    
     <script src="../js/utilisateur.js"></script>
-
     <script src="../js/ajouer-utilisateur.js"></script>
 </body>
 </html>

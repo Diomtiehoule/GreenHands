@@ -1,58 +1,57 @@
-document.getElementById('submit').addEventListener('click', user_save)
+document.getElementById('submit').addEventListener('click', assignation)
 
-function user_save(){
-    const nom = document.getElementById('travailleur')
-    const nbrTaches = document.getElementById('nombreTaches')
-    const taches = document.getElementById('nombreTaches')
-    const Descrip = document.getElementById('taches')
-    const remuneration = document.getElementById('remuneration')
+function assignation(){
+    const nom = document.getElementById('nomUser')
+    const nbrTaches = document.getElementById('nbrsTaskes')
+    const taches = document.getElementById('taskes')
+    const remuneration = document.getElementById('remuns')
 
     const tab = [];
     const objEmpl = {
-        id : "",
+        //id : "",
         nom : nom.value,
-        nombre_tache : nbrTaches.value,
-        taches : Descrip.value,
+        nbrTaches : nbrTaches.value,
+        taches : taches.value,
         remuneration : remuneration.value,
         statut : 1,
     }
 
-    const dataEmpl = localStorage.getItem('administrateurs');
+    const dataEmpl = localStorage.getItem('travailleur');
     let tabJ = JSON.parse(dataEmpl);
     if(!dataEmpl){
-        objEmpl.id='Admin1';
+        objEmpl.id='tch';
         tab.push(objEmpl);
-        localStorage.setItem('administrateurs',JSON.stringify(tab))
+        localStorage.setItem('travailleur',JSON.stringify(tab))
     }else{
         
-        objEmpl.id="Admin"+(tabJ.length+1);
+        objEmpl.id="tch"+(tabJ.length+1);
         tabJ.push(objEmpl);
-        localStorage.setItem("administrateurs",JSON.stringify(tabJ));
+        localStorage.setItem("travailleur",JSON.stringify(tabJ));
 
         
 
     }
     const line = document.createElement('div');
         line.className='attributs';
-        line.id='attribut'+objEmpl.id.replace('Admin','');
-        const idt = document.createElement('p')
+       line.id='attributs'+objEmpl.id.replace('Admin','');
+        /*const idt = document.createElement('p')
         idt.id="ids"+(tabJ.length+1);
         idt.textContent=objEmpl.id
-        line.append(idt)
+        line.append(idt)*/
         const nomT = document.createElement('p')
-        nomT.id='travailleur'+(tabJ.length+1);
+        nomT.id='nomUser'+(tabJ.length+1);
         nomT.textContent=objEmpl.nom
         line.append(nom)
         const nbrT_T = document.createElement('p')
-        nbrT_T.id='nombreTaches'+(tabJ.length+1);
-        nbrT_T.textContent=objEmpl.nombre_tache
+        nbrT_T.id='nbrsTaskes'+(tabJ.length+1);
+        nbrT_T.textContent=objEmpl.nbrTaches
         line.append(nbrT_T)
         const task = document.createElement('p')
-        task.id='taches'+(tabJ.length+1);
+        task.id='taskes'+(tabJ.length+1);
         task.textContent=objEmpl.taches
         line.append(task)
         const remuns = document.createElement('p')
-        remuns.id='remuneration'+(tabJ.length+1);
+        remuns.id='remuns'+(tabJ.length+1);
         remuns.textContent=objEmpl.remuneration
         line.append(remuns)
         const action = document.createElement('p')
@@ -76,29 +75,34 @@ function user_save(){
 
 }
 
-const  selectUer =JSON.parse(localStorage.getItem('administrateurs'))
+const  selectUer =JSON.parse(localStorage.getItem('travailleur'))
+
 function affiche(params){
     if((params.length != 0)){
         params.forEach(element => {
             const line = document.createElement('div');
-            line.className='attributs';
-            line.id='attribut'+element.id.replace('Admin','');
+            line.className='attribut';
+            /*line.id='attribut'+element.id.replace('tch','');
             const idt = document.createElement('p')
             idt.id="ids"+element.id
             idt.textContent=element.id
-            line.append(idt)
+            line.append(idt)*/
             const user = document.createElement('p')
-            user.id='users'+element.id;
+            user.id='nomUsers'+element.id;
             user.textContent=element.nom
             line.append(user)
-            const contacts = document.createElement('p')
-            contacts.id='contacts'+element.id;
-            contacts.textContent=element.contact
-            line.append(contacts)
-            const count = document.createElement('p')
-            count.id='counts'+element.id;
-            count.textContent=element.compte
-            line.append(count)
+            const nbrT_T = document.createElement('p')
+            nbrT_T.id='nbrsTaskes'+element.id;
+            nbrT_T.textContent=element.nbrTaches
+            line.append(nbrT_T)
+            const task = document.createElement('p')
+            task.id='taskes'+element.id;
+            task.textContent=element.taches
+            line.append(task)
+            const remuns = document.createElement('p')
+            remuns.id='remuns'+element.id;
+            remuns.textContent=element.remuneration
+            line.append(remuns)
             const action = document.createElement('p')
             action.id='action'+element.id;
             line.append(action)
