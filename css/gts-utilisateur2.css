@@ -141,11 +141,11 @@ header p
     padding-left: 20px;
     padding-right: 10px;
 }
-.gtsTaskes p, .dashbord p
+.gtsTaskes p, .dashbord p,.compta p
 {
     padding-right: 45px;
 }
-.bilan i
+.bilan i,.compta i
 {
     padding-right: 10px;
 }
@@ -161,7 +161,7 @@ header p
 {
     padding-right: 80px;
 }
-.settings,.gtsTaskes,.bilan,.dashbord
+.settings,.gtsTaskes,.bilan,.dashbord,.compta
 {
     font-size: 1.2rem;
     width: 250px;
@@ -184,7 +184,7 @@ header p
     text-align: center;
     border: 1px  solid;
 }
-.settings:hover,.gtsTaskes:hover,.bilan:hover,.dashbord:hover
+.settings:hover,.gtsTaskes:hover,.bilan:hover,.dashbord:hover,.compta:hover
 {
     width: 250px;
     height: 70px;
@@ -267,11 +267,21 @@ header p
 }
 .registerUser
 {
-    margin-left: 1140px;
+    margin-left: 1100px;
     margin-top: 20px;
-    width: 160px;
-    height: 50px;
+}
+#button
+{
+    font-size: 1.1rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#button:hover
+{
     background-color: rgba(103, 170, 97, 87);
+    color: white;
 }
 .registerUser p
 {

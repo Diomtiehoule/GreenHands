@@ -93,11 +93,11 @@ header p
     padding-left: 20px;
     padding-right: 10px;
 }
-.gtsTaskes p, .dashbord p
+.gtsTaskes p, .dashbord p,.compta p
 {
     padding-right: 45px;
 }
-.bilan i
+.bilan i,.compta i
 {
     padding-right: 10px;
 }
@@ -113,7 +113,7 @@ header p
 {
     padding-right: 80px;
 }
-.settings,.gtsUser,.bilan,.dashbord
+.settings,.gtsUser,.bilan,.dashbord,.compta
 {
     font-size: 1.2rem;
     width: 250px;
@@ -136,7 +136,7 @@ header p
     text-align: center;
     border: 1px  solid;
 }
-.settings:hover,.gtsUser:hover,.bilan:hover,.dashbord:hover
+.settings:hover,.gtsUser:hover,.bilan:hover,.dashbord:hover,.compta:hover
 {
     width: 250px;
     height: 70px;

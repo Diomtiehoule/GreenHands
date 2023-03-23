@@ -1,6 +1,5 @@
 const submit_button = document.querySelector('.btn')
 
-
 submit_button.onclick = (e) => {
 
     e.preventDefault();
@@ -9,16 +8,26 @@ submit_button.onclick = (e) => {
 
     const pass = document.getElementById('password').value;
 
-    localStorage.setItem('email', email)
-    localStorage.setItem('password', pass)
 
-    localStorage.getItem('email')
-    localStorage.getItem('password')
+    const dataAdmin = localStorage.getItem('administrateur');
 
-    let superAdmin = {
-        email : 'ZackLeroi12@gmail.com',
-        pass : 'ZackLeroi12'
-    }
+    
+ localStorage.setItem('email', email)
+ localStorage.setItem('password', pass)
+
+ localStorage.getItem('email')
+ localStorage.getItem('password')
+
+ let  superAdmin = {
+     email : 'ZackLeroi12@gmail.com',
+     pass : 'ZackLeroi12'
+ }
+ let admin = {
+     email : 'DiomKarim@gmail.com',
+     pass : 'Diom10'
+ }
+
+    let tab = JSON.parse(dataAdmin);
 
     if( email == '' && pass == ''){
         swal("Ops...", "veuillez saisir tout les champs", "error");
@@ -28,12 +37,13 @@ submit_button.onclick = (e) => {
         
         swal("Authentification confirmée", "Bienvenue super admin", "success");
 
-        { location.href="../html/Tableau de bord.html"; }
-        let btn = document.querySelectorAll('.button')
-        btn.style.visibility = 'hidden';
+        window.location.replace("Tableau de bord.html");
+
+        button_register.style.display = 'none';
 
     }else if( email != superAdmin.email || pass != superAdmin.pass){
         swal("Ops...", "Utilisateur inconnu", "error");
+        
     }
 }
  function superAdminZone(){

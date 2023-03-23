@@ -50,6 +50,11 @@ header img
 {
     font-size: 2rem;
     padding-top: 30px;
+    cursor: pointer;
+}
+.profil i:hover
+{
+    color: rgba(103, 170, 97, 87);
 }
 header p
 {
@@ -91,11 +96,11 @@ header p
     padding-left: 20px;
     padding-right: 10px;
 }
-.gtsTaskes p, .dashbord p
+.gtsTaskes p, .dashbord p,.compta p
 {
     padding-right: 45px;
 }
-.bilan i
+.bilan i,.compta i
 {
     padding-right: 10px;
 }
@@ -111,7 +116,7 @@ header p
 {
     padding-right: 80px;
 }
-.settings,.gtsTaskes,.bilan,.gtsUser
+.settings,.gtsTaskes,.bilan,.gtsUser,.compta
 {
     font-size: 1.2rem;
     width: 250px;
@@ -134,7 +139,8 @@ header p
     text-align: center;
     border: 1px  solid;
 }
-.settings:hover,.gtsTaskes:hover,.bilan:hover,.gtsUser:hover
+.settings:hover,.gtsTaskes:hover,.bilan:hover,.gtsUser:hover,.compta:hover
+
 {
     width: 250px;
     height: 70px;
@@ -242,9 +248,9 @@ header p
 .action .menuProfil
 {
     position: absolute;
-    background-color: #D9D9D9;
-    top: 80px;
-    right: -10px;
+    background-color: rgba(103, 170, 97, 87);
+    top: 35px;
+    right: -20px;
     padding: 10px 20px;
     margin-top: 10px;
     margin-right: 50px;
@@ -275,12 +281,20 @@ header p
 }
 .action .menuProfil h2
 {
-    width: 100px;
+    color: #D9D9D9;
+    width: 200px;
     font-size: 18px;
-    padding: 20px 10px;
+    padding-left: 25px;
+    padding-top: 30px;
+    padding-bottom: 25px;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.2rem;
+    text-transform: uppercase;
+}
+.action p
+{
+    color: #D9D9D9;
 }
 .action ul
 {
@@ -310,11 +324,11 @@ header p
 {
     display: inline-block;
     text-decoration: none;
-    color: #555;
+    color: #D9D9D9;
     font-weight: 500;
     transition: 0.5s;
 }
 .action .menuProfil ul li:hover a
 {
-    color: rgba(103, 170, 97, 87);
+    color: black;
 }
