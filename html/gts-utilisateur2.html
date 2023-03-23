@@ -80,11 +80,12 @@
     
     <div class="array">
 
-        <div class="attribut">
-            <p id="users">Nom prenom(s)</p>
-            <p id="contacts">Adresse email</p>
-            <p id="counts">Mot de passe</p>
-            <p id="actions">Action</p>
+        <div class="attribut" id="attributs
+        ">
+            <p id="user">Nom prenom(s)</p>
+            <p id="email">Adresse email</p>
+            <p id="key">Mot de passe</p>
+            <p id="action">Action</p>
         </div>
 
         <!--<div class="attributs"  id="attribut1">
@@ -127,14 +128,47 @@
 
     <div class="border2"></div>
 
-    <div class="registerUser" class="addUser">
+    <div class="registerUser" class="addUser" onclick="formToggle();">
         <button id="button">
-            Inscrire un utilisateur
+            Inscrire un administrateur
         </button> 
     </div>
 
     
-    <script src="../js/ajouer-utilisateur.js"></script>
+    <section id="form_user">
+        <div class="close_form">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+        </div>
+        <h2>Nouvel administrateur</h2>
+        <form action="">
+
+        <div class="single_input">
+            <input type="text" name="nom" class="nom" id="nomAdmin" placeholder=" Nom administrateur">
+        </div>
+
+        <div class="single_input">
+            <input type="email" name="email" class="email" id="emailAdmin" placeholder="email administrateur">
+        </div>
+        
+        <div class="single_input">
+            <input type="password" name="pass" class="pass" id="passAdmin" placeholder="mot de passe de l'administrateur">
+        </div>
+
+        <div class="button">
+            <button class="button" id="submit" type="button">envoyer</button>
+        </div>
+    </form>
+
+    </section>
+
+    <script>
+        function formToggle(){
+            const formTog = document.querySelector('#form_user')
+
+            formTog.classList.toggle('active')
+            }
+    </script>
+    <script src="../js/administrateur.js"></script>
     <script src="../js/utilisateur.js"></script>
 </body>
 </html>

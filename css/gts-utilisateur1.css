@@ -268,7 +268,7 @@ header p
 }
 .array #action
 {padding-right: 30px;
-    padding-left: 10px;
+    padding-left: 45px;
 }
 .array #count
 {
@@ -277,6 +277,7 @@ header p
 .array #contact
 {
     padding-left: 20px;
+    padding-right: 10px;
 }
 .registerUser
 {

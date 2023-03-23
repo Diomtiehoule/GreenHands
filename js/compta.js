@@ -2,6 +2,7 @@ document.getElementById('submit').addEventListener('click', payement)
 const nom = document.getElementById('nomUser')
     const taches = document.getElementById('taskes')
     const remuneration = document.getElementById('remuns')
+    const compte = document.getElementById('count')
 
 function payement(){
     
@@ -10,6 +11,7 @@ function payement(){
         nom : nom.value,
         taches : taches.value,
         remuneration : remuneration.value,
+        compte : compte.value,
         statut : 1,
     }
 
@@ -42,6 +44,11 @@ function payement(){
         remun.id='remuns'+(tabJ.length+1);
         remun.textContent=objSalaire.remuneration
         line.append(remun)
+
+        const Cmoney = document.createElement('p')
+        Cmoney.id='count'+(tabJ.length+1);
+        Cmoney.textContent=objSalaire.remuneration
+        line.append(Cmoney)
 
         const actions = document.createElement('p')
         actions.id='action'+(tabJ.length+1);
@@ -89,6 +96,10 @@ function affiche(params){
             remun.id='remuns'+element.id;
             remun.textContent=element.remuneration
             line.append(remun)
+            const Cmoney = document.createElement('p')
+            Cmoney.id='count'+element.id;
+            Cmoney.textContent=element.compte
+            line.append(Cmoney)
             const actions = document.createElement('p')
             actions.id='action'+element.id;
             line.append(actions)

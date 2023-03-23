@@ -96,7 +96,7 @@ header img
 .profilUser i
 {
     padding-top: 30px;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 header p
 {
@@ -222,7 +222,7 @@ header p
 }
 .attributs #travailleur
 {
-    margin-right: 120px;
+    margin-right: 0px;
 }
 .attributs #taches
 {
@@ -247,6 +247,9 @@ header p
 .attribut .left
 {
     background-color: rgb(48, 224, 48);
+    margin-right:55px;
+    width: 50px;
+    text-align: center;
 }
 
 .registerUser

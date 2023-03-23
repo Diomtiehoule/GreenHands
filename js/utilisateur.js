@@ -17,7 +17,6 @@ modif.forEach(key=>{
 })
 
 function modifier (e){
-
     if(document.querySelector(".annuler")){
         const btnAnnuler = document.querySelector('.annuler')
 
