@@ -57,6 +57,14 @@ header nav ul
     padding-top: 20px;
     padding-right: 20px;
 }
+header ul a:hover
+{
+    border-bottom: 1px solid white;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    visibility: visible;
+}
 
 
 /* UNTIL */
@@ -221,42 +229,71 @@ input[type="email"]
 
 
 
-
+/* Footer */
 footer
 {
     width: 100%;
-    height: 200px;
-    background:  rgba(0, 128, 0, 0.496);
-    border: 1px solid;
+    height: 320px;
+    background-color: rgba(0, 128, 0, 0.496);
+}
+.socialIcons 
+{
+    position: relative;
+    top: 170px;
+    left: -200px ;
+}
+.socialIcons i
+{
+    font-size: 1.7rem;
+    gap: 50px;
+    padding-left: 10px;
 }
 footer img
 {
-    padding-bottom: 30px;
-    width: 200px;
-    padding-left: 20px;
-    padding-top: 10px;
+    width: 250px;
+    height: 100px;
+    padding-top: 20px ;
+    padding-left: 40px;
+    float: left;
 }
-.infoFooter
+footer .infoFooter
 {
-    display: flex;
     float: right;
-    gap: 25px;
-    padding-top: 0;
+    display: flex;
+    padding-top: 30px;
+    padding-right: 30px;
+    gap: 40px;
+
 }
-h5,h6
+.infoFooter h6,h5
 {
-    font-size:1.5rem ;
+    font-size: 1.5rem;
+    font-style: normal;
 }
-/*.border
+.infoFooter ul li
 {
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+.EndFooter
+{
+
     position: relative;
-    border: 1px solid;
+    top: 250px;
+}
+.borderF
+{
+    border: 1px solid black;
     width: 100%;
 }
 .copyright
 {
-    position: relative;
     text-align: center;
-    bottom: -75px;
-    font-size: 1.2rem;
-}*/
+    font-size: 1.4rem;
+    padding-top: 10px;
+}
+.copyright i
+{
+    font-size: 1rem;
+    padding-right: 10px;
+}

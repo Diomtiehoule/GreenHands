@@ -110,6 +110,11 @@ header img
     padding-top: 30px;
     font-size: 2rem;
 }
+.profilUser i:hover
+{
+    color: rgba(103, 170, 97, 87);
+    cursor: pointer;
+}
 header p
 {
     margin-top: 35px;

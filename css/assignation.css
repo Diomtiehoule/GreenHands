@@ -80,6 +80,13 @@ header
     height: 100px;
     background-color: #D9D9D9;
 }
+header #icon i
+{
+    position: absolute;
+    top: 35px;
+    left: 60px;
+    font-size: 2rem;
+}
 header img
 {
     padding-left: 10px;
@@ -98,6 +105,11 @@ header img
     font-size: 2rem;
     padding-top: 30px;
 }
+.profilUser i:hover
+{
+    color: rgba(103, 170, 97, 87);
+    cursor: pointer;
+}
 header p
 {
     margin-top: 35px;
@@ -111,6 +123,7 @@ header p
 {
     float: left;
     height: 100%;
+
     
 }
 .menu
@@ -120,6 +133,7 @@ header p
     margin-top: 70px;
     background-color: #D9D9D9;
 }
+
 .menu i
 {
     font-size: 2rem;
@@ -524,4 +538,38 @@ button
 {
     width: 200px;
     height: 40px
+}
+
+
+@media screen and (max-width : 400px){
+    .profil p{
+        display: none;
+    }
+    .profil{
+        margin-right: 0;
+        
+    }
+    .profil i{
+        margin-right: 5px;
+        font-size: 1.7rem;
+    }
+    header:hover{
+        background: transparent;
+        
+        border-bottom: 1px solid rgba(103, 170, 97, 87);
+    }
+    .steps
+    {
+        display: none;
+    }
+    .menu{
+        margin-top: 0;
+
+        }
+    .menu p{
+        display: none;
+    }
+    .array{
+        width: 0px;
+    }
 }
