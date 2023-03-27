@@ -163,7 +163,7 @@ header p
 {
     z-index: auto;
     margin-left: 300px;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 .general
 {
@@ -204,28 +204,33 @@ header p
 }
 .effTask i
 {
-    z-index: 2;
+    position: absolute;
+    bottom: 30000px;
+    right: 200px;
     font-size: 5rem;
     right: 800px;
     bottom: 270px;
 }
 .budPaie i
 {
-    z-index: 2;
-    right: 420px;
-    bottom: 270px;
+    position: absolute;
+    top: 620px;
+    left: 510px;
     font-size: 5rem;
 }
 .members i
 {
-    z-index: 2;
-    right: 100px;
+    position: absolute;
+    top: 620px;
+    right: 420px;
     bottom: 270px;
     font-size: 5rem;
 }
 .product i
 {
-    z-index: 4;
+    position: absolute;
+    top: 620px;
+    right: 60px;
     margin-top: 0px;
     margin-bottom: 60px;
     
@@ -242,10 +247,10 @@ header p
 .action
 {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 55px;
+    right: -30px;
 }
-.action .menuProfil
+.action .menuProfil 
 {
     position: absolute;
     background-color: rgba(103, 170, 97, 87);
@@ -257,7 +262,6 @@ header p
     width: 200px;
     height: 300px;
     box-sizing: 0 5px 25px rgba(0,0,0,1);
-    border-radius: 15px;
     transition: 0.5s;
     visibility: hidden;
     opacity: 0;
@@ -332,3 +336,10 @@ header p
 {
     color: black;
 }
+
+/*canvas*/
+#chart {
+    max-width: 500px;
+    margin-left: 300px;
+    margin-top: 70px;
+  }

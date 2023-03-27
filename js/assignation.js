@@ -50,8 +50,8 @@ function assignation(){
         task.id='taskes'+(tabJ.length+1);
         task.textContent=objEmpl.taches
         line.append(task)
-        const remuns = document.createElement('p')
-        remuns.id='remuns'+(tabJ.length+1);
+        // const remuns = document.createElement('p')
+        // remuns.id='remuns'+(tabJ.length+1);
         remuns.textContent=objEmpl.remuneration
         line.append(remuns)
         const action = document.createElement('p')
@@ -99,10 +99,10 @@ function affiche(params){
             task.id='taskes'+element.id;
             task.textContent=element.taches
             line.append(task)
-            const remuns = document.createElement('p')
-            remuns.id='remuns'+element.id;
-            remuns.textContent=element.remuneration
-            line.append(remuns)
+            // const remuns = document.createElement('p')
+            // remuns.id='remuns'+element.id;
+            // remuns.textContent=element.remuneration
+            // line.append(remuns)
             const action = document.createElement('p')
             action.id='action'+element.id;
             line.append(action)

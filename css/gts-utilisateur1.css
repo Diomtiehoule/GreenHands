@@ -386,22 +386,21 @@ input
 .action
 {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 55px;
+    right: -30px;
 }
-.action .menuProfil
+.action .menuProfil 
 {
     position: absolute;
-    background-color: #D9D9D9;
-    top: 80px;
-    right: -10px;
+    background-color: rgba(103, 170, 97, 87);
+    top: 35px;
+    right: -20px;
     padding: 10px 20px;
     margin-top: 10px;
     margin-right: 50px;
     width: 200px;
     height: 300px;
     box-sizing: 0 5px 25px rgba(0,0,0,1);
-    border-radius: 15px;
     transition: 0.5s;
     visibility: hidden;
     opacity: 0;
@@ -425,12 +424,20 @@ input
 }
 .action .menuProfil h2
 {
-    width: 100px;
+    color: #D9D9D9;
+    width: 200px;
     font-size: 18px;
-    padding: 20px 10px;
+    padding-left: 25px;
+    padding-top: 30px;
+    padding-bottom: 25px;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.2rem;
+    text-transform: uppercase;
+}
+.action p
+{
+    color: #D9D9D9;
 }
 .action ul
 {
@@ -460,11 +467,11 @@ input
 {
     display: inline-block;
     text-decoration: none;
-    color: #555;
+    color: #D9D9D9;
     font-weight: 500;
     transition: 0.5s;
 }
 .action .menuProfil ul li:hover a
 {
-    color: rgba(103, 170, 97, 87);
+    color: black;
 }

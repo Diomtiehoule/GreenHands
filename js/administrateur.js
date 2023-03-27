@@ -10,7 +10,7 @@ function user_save(){
         id : "",
         nom : nom.value,
         email : email.value,
-        pass : pass.value,
+        // pass : pass.value,
         statut : 1,
     }
 
@@ -32,25 +32,25 @@ function user_save(){
     const line = document.createElement('div');
         line.className='attribut';
         line.id='attributs'+objEmpl.id.replace('Admin','');
-        const idt = document.createElement('p')
-        idt.id="ids"+(tabJ.length+1);
-        idt.textContent=objEmpl.id
-        line.append(idt)
+        // const idt = document.createElement('p')
+        // idt.id="ids"+(tabJ.length+1);
+        // idt.textContent=objEmpl.id
+        // line.append(idt)
 
         const user = document.createElement('p')
-        user.id='users'+(tabJ.length+1);
+        user.id='nomAdmin'+(tabJ.length+1);
         user.textContent=objEmpl.nom
         line.append(user)
 
         const emails = document.createElement('p')
-        emails.id='emails'+(tabJ.length+1);
+        emails.id='emailAdmin'+(tabJ.length+1);
         emails.textContent=objEmpl.email
         line.append(emails)
 
-        const key = document.createElement('p')
-        key.id='keys'+(tabJ.length+1);
-        key.textContent=objEmpl.pass
-        line.append(key)
+        // const key = document.createElement('p')
+        // key.id='passAdmin'+(tabJ.length+1);
+        // key.textContent=objEmpl.pass
+        // line.append(key)
 
         const action = document.createElement('p')
         action.id='action'+(tabJ.length+1);
@@ -90,19 +90,19 @@ function affiche(params){
             line.append(idt)
 
             const user = document.createElement('p')
-            user.id='users'+element.id;
+            user.id='nomAdmin'+element.id;
             user.textContent=element.nom
             line.append(user)
 
             const emails = document.createElement('p')
-            emails.id='emails'+element.id;
+            emails.id='emailAdmin'+element.id;
             emails.textContent=element.email
             line.append(emails)
 
-            const key = document.createElement('p')
-            key.id='keys'+element.id;
-            key.textContent=element.pass
-            line.append(key)
+            // const key = document.createElement('p')
+            // key.id='passAdmin'+element.id;
+            // key.textContent=element.pass
+            // line.append(key)
 
             const action = document.createElement('p')
             action.id='action'+element.id;
@@ -122,6 +122,12 @@ function affiche(params){
             right.id='right'+element.id;
             action.append(right);
             document.getElementById("array").append(line) 
+
+            right.addEventListener('click', supprimer)
+
+            function supprimer(e){
+                document.getElementsByClassName(e.target.id.replace('right','attribut')).remove('div')
+            }
         });
     }
 }
