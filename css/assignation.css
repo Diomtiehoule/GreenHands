@@ -570,7 +570,7 @@ button
     .menu p{
         display: none;
     }
-    .array,.attribut{
-        width: 100%;
+    .array,.attribut,.border,.border2{
+        width: 0px;
     }
 }

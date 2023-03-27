@@ -125,8 +125,3 @@ function affiche(params){
     }
 }
 affiche(selectUer);
-
-
-
-
-

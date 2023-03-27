@@ -339,7 +339,7 @@ header p
 
 /*canvas*/
 #chart {
-    max-width: 500px;
+    max-width: 1000px;
     margin-left: 300px;
     margin-top: 70px;
   }
