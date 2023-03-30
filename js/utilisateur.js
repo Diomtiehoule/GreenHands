@@ -9,7 +9,7 @@ delet.forEach(key=>{
 })
 
 function supprimer (e){
-    document.getElementById(e.target.id.replace("right","attribut")).remove()
+    document.getElementById(e.target.className.replace("right","attribut")).remove()
 }
 
 modif.forEach(key=>{

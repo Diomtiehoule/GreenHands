@@ -47,8 +47,7 @@
         <ul>
             <li><a href="../html/index.html"> Accueil </a><i class="fa-solid fa-chevron-right"></i></li>
             <li>Administrateur <i class="fa-solid fa-chevron-right"></i></li>
-            <li>comptabilite<i class="fa-solid fa-chevron-right"></i></li>
-            <li>fiche de paie</li>
+            <li>Comptabilite</li>
         </ul>
     </div>
 
@@ -77,23 +76,61 @@
             <input type="text" name="taches" class="taske" id="taskes" placeholder="Tache(s) effectuée(s)">
         </div>
 
-        <div class="single_input">
-            <label for="pet-select">Moyens de paiement:</label>
-
-            <select id="pet-select">
-                <option value="">Choisissez un opérateur</option>
-                <option value="Orange Money">Orange Money</option>
-                <option value="Moov Money">Moov Money</option>
-                <option value="MTN Money">MTN Money</option>
-                <option value="Wave">Wave</option>
-            </select>
-
-            <!--<input type="text" name="taches" class="taske" id="taskes" placeholder="Tache(s) effectuée(s)">-->
+        <input type="text" name="taches" class="taske" id="taskes" placeholder="Tache(s) effectuée(s)">
         </div>
 
         <div class="single_input">
             <input type="text" name="renumeration" class="remun" id="remuns" placeholder="Somme a versé">
         </div>
+
+
+        <div class="single_input">
+            <!-- <label for="pet-select">Moyens de paiement:</label> -->
+
+
+            <div class="radio">
+                
+               
+                    <input id='walk' type="radio" name="radio">
+                    <div class="radio_tile">
+                        <img src="../images/orange money.png" alt=""><br>
+                        <label for="Orange_money">Orange Money</label>
+                    </div>    
+             
+
+                
+                    <input id='walk' type="radio" name="radio">
+                    <div class="radio_tile">
+                        <img src="../images/moov.png" alt="">
+                        <label for="Orange_money">Moov Money</label>
+                    </div>
+                
+
+               
+                    <input id='walk' type="radio" name="radio">
+                    <div class="radio_tile">
+                        <img src="../images/MTN-Mobile-Money-.webp" alt="">
+                        <label for="Orange_money">MTN Money</label>
+                    </div>
+                
+
+                
+                    <input id='walk' type="radio" name="radio">
+                    <div class="radio_tile">
+                        <img src="../images/wave.png" alt="">
+                        <label for="Orange_money">Wave Money</label>
+                    </div>
+                
+
+            </div>
+            </div>
+            <!-- <select id="pet-select">
+                <option value="">Choisissez un opérateur</option>
+                <option value="Orange Money">Orange Money</option>
+                <option value="Moov Money">Moov Money</option>
+                <option value="MTN Money">MTN Money</option>
+                <option value="Wave">Wave</option>
+            </select> -->
 
         <div class="single_input">
             <input type="tel" name="renumeration" class="counts" id="count" placeholder="Compte à soldé">

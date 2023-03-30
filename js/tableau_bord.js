@@ -91,3 +91,21 @@ var options = {
   chart.render();
   
 
+
+
+
+
+
+
+
+// let mychart = new chart(ctx ,{
+//   type: 'pie',
+//   data: {
+//     labels :["terminer","en cours","non executé"],
+//     datasets: [{
+//       label : "Efficacité",
+//       data :[70,20,10]
+
+//     }]
+//   }
+// })

@@ -201,3 +201,98 @@ margin-left: 330px;
 {
     margin-left: 20px;
 }
+
+
+/*DROPMENU*/
+.action
+{
+    position: absolute;
+    top: 55px;
+    right: -30px;
+}
+.action .menuProfil 
+{
+    position: absolute;
+    background-color: rgba(103, 170, 97, 87);
+    top: 35px;
+    right: -20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 50px;
+    width: 200px;
+    height: 300px;
+    box-sizing: 0 5px 25px rgba(0,0,0,1);
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.action .menuProfil.active
+{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.action .menuProfil::before
+{
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 28px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+.action .menuProfil h2
+{
+    color: #D9D9D9;
+    width: 200px;
+    font-size: 18px;
+    padding-left: 25px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2rem;
+    text-transform: uppercase;
+}
+.action p
+{
+    color: #D9D9D9;
+}
+.action ul
+{
+    display: inline;
+    font-size: 1.2rem;
+}
+.action .menuProfil ul li
+{
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+}
+.action .menuProfil ul li i
+{
+    max-width: 20px;
+    margin-right: 20px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.action .menuProfil ul li:hover i
+{
+    opacity: 1;
+}
+.action .menuProfil ul li a
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #D9D9D9;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.action .menuProfil ul li:hover a
+{
+    color: black;
+}

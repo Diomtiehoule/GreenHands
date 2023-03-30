@@ -254,7 +254,7 @@ header p
 
     margin-left: 50px
 }
-.array .attributs
+.array #attributs
 {
     
     margin-left: 250px;
@@ -270,7 +270,7 @@ header p
     display: flex;
 
 }
-.attribut
+.attributs
 {
     
     margin-left: 250px;

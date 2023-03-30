@@ -231,7 +231,8 @@ header p
 }
 .attributs #taches
 {
-    margin-right: 70px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 .attribut
 {
@@ -302,20 +303,20 @@ header p
     width: 600px;
     position: absolute;
     top: 250px;
-   height: 500px;
+   height: 530px;
    display: inline; 
    text-align: center;
    background-color: rgba(103, 170, 97, 87);
    margin-left: 200px;
    visibility: hidden;
-   transition: 0.2s;
+   transition: 0.3s;
 }
 #form_user.active
 {
     width: 600px;
     position: absolute;
-    top: 250px;
-   height: 500px;
+    top: 200px;
+   height: 530px;
    display: inline; 
    text-align: center;
    background-color: rgba(103, 170, 97, 87);
@@ -324,13 +325,13 @@ header p
 }
 #form_user h2
 {
-    padding-top: 50px;
+    padding-top: 20px;
 }
 form
 {
     justify-content: center;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 30px;
 }
 input
 {
@@ -345,4 +346,39 @@ button
 {
     width: 200px;
     height: 40px
+}
+
+.radio
+{
+    display: flex;
+    padding-left: 20px;
+    gap: 10px;
+}
+.radio img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.radio_tile
+{
+    display: flex;
+}
+
+
+#walk
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+}
+.radio label
+{
+    padding-top: 12px;
+}
+
+
+#counts
+{
+    margin-top: 10px;
 }

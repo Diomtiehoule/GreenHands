@@ -159,47 +159,62 @@ header p
 }
 
 /* DASH */
-#dash
+.general
 {
-    z-index: auto;
     margin-left: 300px;
-    margin-top: 50px;
+}
+ h1
+{
+    margin-left: 30px;
+    padding-top: 30px;
 }
 .general
 {
     display: flex;
-    gap: 50px;
+    gap: 80px;
     flex-wrap: wrap;
 }
-.first p
+.second h1
 {
-    font-size: 3.5rem;
-    padding-top: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .second p
 {
-    padding-top: 40px;
+    padding-top: 30px;
     padding-left: 20px;
     font-size: 1.5rem;
+}
+.third h1
+{
+    padding-top: 50px;
 }
 .third p
 {
     padding-left: 20px;
-    padding-top: 40px;
+    padding-top: 25px;
     font-size: 1.5rem;
 }
 .fourth p
 {
-    padding-left: 20px;
-    padding-top: 40px;
-    font-size: 1.5rem;
+    padding-top: 20px;
+    padding-left: 70px;
+    font-size: 2rem;
+}
+.fourth h1
+{
+    padding-top: 60px;
+}
+.budPaie h1
+{
+    padding-top: 50px;
+    padding-right: 0px;
 }
 .effTask ,.budPaie ,.members,.product
 {
     margin-bottom: 5px;
-    width: 300px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     background-color: #D9D9D9;
 }
 .effTask i
@@ -338,8 +353,9 @@ header p
 }
 
 /*canvas*/
-#chart {
-    max-width: 1000px;
+#chart
+ {
+    max-width: 800px;
     margin-left: 300px;
     margin-top: 70px;
   }
