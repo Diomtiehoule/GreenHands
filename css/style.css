@@ -153,6 +153,7 @@ h2
     align-items: center;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 .OurPartner img
@@ -233,6 +234,7 @@ input[type="email"]
 /* Footer */
 footer
 {
+    flex-wrap: wrap;
     width: 100%;
     height: 320px;
     background-color: rgba(0, 128, 0, 0.496);
@@ -264,6 +266,10 @@ footer .infoFooter
     padding-top: 30px;
     padding-right: 30px;
     gap: 40px;
+
+}
+.infoFooter
+{
 
 }
 .infoFooter h6,h5
@@ -300,9 +306,13 @@ footer .infoFooter
 }
 
 
-@media (max-with: 1200px) {
+@media screen and (max-with: 1200px) {
     header{
         width: 100%;
+    }
+    .until p
+    {
+        font-size: .1rem;
     }
     .until
     {
@@ -319,9 +329,43 @@ footer .infoFooter
         justify-content: center;
         align-items: center;
     }
+    .imgPartner
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
     footer
     {
         width: 100%;
         height: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    footer img
+    {
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .infoFooter
+    {
+        
+    }
+    .socialIcons
+    {
+        float: left;
+        font-size: 1px;
+    }
+    .copyright{
+        float: right;
     }
 }

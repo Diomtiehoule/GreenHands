@@ -1,125 +1,152 @@
-document.getElementById('submit').addEventListener('click', assignation)
-
-function assignation(){
-    const nom = document.getElementById('nomUser')
-    const nbrTaches = document.getElementById('nbrsTaskes')
+document.getElementById('submit').addEventListener('click', payement)
+const btn = document.getElementById('button')
+const nom = document.getElementById('nomUser')
     const taches = document.getElementById('taskes')
+    const remuneration = document.getElementById('remuns')
 
+function payement(){
+    
     const tab = [];
-    const objEmpl = {
-        //id : "",
+    const resultat = {
         nom : nom.value,
-        nbrTaches : nbrTaches.value,
         taches : taches.value,
+        remuneration : remuneration.value,
         statut : 1,
     }
 
-    const dataEmpl = localStorage.getItem('travailleur');
-    let tabJ = JSON.parse(dataEmpl);
-    if(!dataEmpl){
-        objEmpl.id='tch';
-        tab.push(objEmpl);
-        localStorage.setItem('travailleur',JSON.stringify(tab))
+    const dataResultat = localStorage.getItem('resultat');
+    let tabJ = JSON.parse(dataResultat);
+    if(!dataResultat){
+        tab.push(resultat);
+        localStorage.setItem('resultat',JSON.stringify(tab))
     }else{
-        
-        objEmpl.id="tch"+(tabJ.length+1);
-        tabJ.push(objEmpl);
-        localStorage.setItem("travailleur",JSON.stringify(tabJ));
+        tabJ.push(resultat);
+        localStorage.setItem("resultat",JSON.stringify(tabJ));
 
         
 
     }
     const line = document.createElement('div');
-        line.className='attributs';
-       line.id='attributs'+objEmpl.id.replace('Admin','');
-        /*const idt = document.createElement('p')
-        idt.id="ids"+(tabJ.length+1);
-        idt.textContent=objEmpl.id
-        line.append(idt)*/
+        line.className='attribut';
+       line.id='attributs'+resultat.id.replace('vu','');
         const nomT = document.createElement('p')
         nomT.id='nomUser'+(tabJ.length+1);
-        nomT.textContent=objEmpl.nom
-        line.append(nomT)
-        const nbrT_T = document.createElement('p')
-        nbrT_T.id='nbrsTaskes'+(tabJ.length+1);
-        nbrT_T.textContent=objEmpl.nbrTaches
-        line.append(nbrT_T)
+        nomT.textContent=resultat.nom
+        line.append(nom)
+        
         const task = document.createElement('p')
         task.id='taskes'+(tabJ.length+1);
-        task.textContent=objEmpl.taches
+        task.textContent=resultat.taches
         line.append(task)
-        // const remuns = document.createElement('p')
-        // remuns.id='remuns'+(tabJ.length+1);
-        // remuns.textContent=objEmpl.remuneration
-        // line.append(remuns)
-        const action = document.createElement('p')
-        action.id='action'+(tabJ.length+1);
-        line.append(action)
+
+        const remun = document.createElement('p')
+        remun.id='remuns'+(tabJ.length+1);
+        remun.textContent=resultat.remuneration
+        line.append(remun)
+
+        // const Cmoney = document.createElement('p')
+        // Cmoney.id='count'+(tabJ.length+1);
+        // Cmoney.textContent=resultat.remuneration
+        // line.append(Cmoney)
+
+        const actions = document.createElement('p')
+        actions.id='action'+(tabJ.length+1);
+        line.append(actions)
         const option = document.createElement('div')
         option.className='option';
         option.id='option'+(tabJ.length+1);
-        action.append(option)
-        const left = document.createElement('div')
-        left.className='left';
-        left.textContent='modifier'
-        left.id='left'+(tabJ.length+1);
-        option.append(left)
-        const right = document.createElement('div')
+        actions.append(option)
+        const valid = document.createElement('radio')
+        valid.className='done';
+        valid.textContent=''
+        valid.id='dones'+(tabJ.length+1);
+        option.append(valid)
+        const right = document.createElement('radio')
         right.className='right';
-        right.textContent='supprimer';
-        right.id='right'+(tabJ.length+1);
+        right.textContent='';
+        right.id='rights'+(tabJ.length+1);
         action.append(right);
         document.getElementById("array").append(line)
 
 }
 
-const  selectUer =JSON.parse(localStorage.getItem('travailleur'))
+const  selectUser =JSON.parse(localStorage.getItem('resultat'))
 
 function affiche(params){
     if((params.length != 0)){
         params.forEach(element => {
             const line = document.createElement('div');
-            line.className='attributs';
+            line.className='attribut';
             /*line.id='attribut'+element.id.replace('tch','');
             const idt = document.createElement('p')
             idt.id="ids"+element.id
             idt.textContent=element.id
             line.append(idt)*/
             const user = document.createElement('p')
-            user.id='nomUsers'+element.id;
+            user.id='nomUser'+element.id;
             user.textContent=element.nom
             line.append(user)
-            const nbrT_T = document.createElement('p')
-            nbrT_T.id='nbrsTaskes'+element.id;
-            nbrT_T.textContent=element.nbrTaches
-            line.append(nbrT_T)
+           
             const task = document.createElement('p')
             task.id='taskes'+element.id;
             task.textContent=element.taches
             line.append(task)
-            // const remuns = document.createElement('p')
-            // remuns.id='remuns'+element.id;
-            // remuns.textContent=element.remuneration
-            // line.append(remuns)
-            const action = document.createElement('p')
-            action.id='action'+element.id;
-            line.append(action)
+            const remun = document.createElement('p')
+            remun.id='remuns'+element.id;
+            remun.textContent=element.remuneration
+            line.append(remun)
+            // const Cmoney = document.createElement('p')
+            // Cmoney.id='count'+element.id;
+            // Cmoney.textContent=element.compte
+            // line.append(Cmoney)
+            const actions = document.createElement('p')
+            actions.id='action'+element.id;
+            line.append(actions)
             const option = document.createElement('div')
             option.className='option';
             option.id='option'+element.id;
-            action.append(option)
-            const left = document.createElement('div')
-            left.className='left';
-            left.textContent='modifier'
-            left.id='left'+element.id;
-            option.append(left)
-            const right = document.createElement('div')
+            actions.append(option)
+            const valid = document.createElement('radio')
+            valid.className='done';
+            valid.textContent=''
+            valid.id='dones'+element.id;
+            option.append(valid)
+            const right = document.createElement('radio')
             right.className='right';
-            right.textContent='supprimer';
-            right.id='right'+element.id;
+            right.textContent='';
+            right.id='rights'+element.id;
             action.append(right);
             document.getElementById("array").append(line) 
         });
     }
 }
 affiche(selectUer);
+
+function formToggle(){
+
+    const formTog = document.querySelector('#form_user')
+  formTog.classList.toggle('active')
+
+  const button = document.querySelector('#submit')
+    button.addEventListener('click', () =>{
+        if(nom =="" || taches =="" || remuneration ==""){
+            return false;
+        }else if(nom && taches && remuneration)
+        {
+            swal("Payement éffectué", "resultat versé au travailleur", "success");
+            formTog.classList.remove('active')
+        }      
+    })
+    }
+
+
+
+
+
+    if(sessionStorage.session){
+        const valeur = JSON.parse(localStorage.superAdmin);
+        const type = JSON.parse(sessionStorage.session)
+        if(type.email == valeur.email && type.pass == valeur.pass){
+           btn.style.display='none';
+        }
+      }

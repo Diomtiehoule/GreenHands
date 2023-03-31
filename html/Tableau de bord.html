@@ -41,8 +41,8 @@
 
     <div class="action">
         <div class="menuProfil">
-            <h2>Zack Leroi</h2>
-            <p>ZackLeroi12@gmail.com</p>
+            <h2 id="nomSession">Zack Leroi</h2>
+            <p id = emailSession>ZackLeroi12@gmail.com</p>
             <ul>
                 <li><i class="fa fa-light fa-circle-user"></i><a href="#">Profil</a></li>
                 <li><i class="fa-solid fa-user-pen"></i><a href="#">Modifier profil</a></li>
@@ -115,7 +115,25 @@
     togMenu.classList.toggle("active")
 }
     </script>
-
+    <script>
+        const btn = document.getElementById('button')
+        const add = document.getElementById('admin')
+        const del = document.querySelectorAll('left')
+        const user = document.getElementById('nomSession')
+        const email = document.getElementById('emailSession')
+         if(sessionStorage.session){
+        const valeur = JSON.parse(localStorage.superAdmin);
+        const valeur2 = JSON.parse(localStorage.admin)
+        const type = JSON.parse(sessionStorage.session)
+        if(type.email == valeur.email && type.pass == valeur.pass){
+        btn.style.display='none';
+        del.style.display='none'
+        }else if(type.email == valeur2.email && type.pass == valeur2.pass){
+            user.innerHTML = 'Diomande K';
+            email.innerHTML = 'DiomKarim@gmail.com'
+        }
+      }
+    </script>
      
     <script src="../js/tableau_bord.js"></script>
 </body>

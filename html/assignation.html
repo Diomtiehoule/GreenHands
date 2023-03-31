@@ -111,6 +111,20 @@
     <script src="../js/login.js"></script>
     <script src="../js/utilisateur.js"></script>
     <script src="../js/assignation.js"></script>
+    <script>
+        const btn = document.getElementById('button')
+        const add = document.getElementById('admin')
+         if(sessionStorage.session){
+        const valeur = JSON.parse(localStorage.superAdmin);
+        const valeur2 = JSON.parse(localStorage.admin)
+        const type = JSON.parse(sessionStorage.session)
+        if(type.email == valeur.email && type.pass == valeur.pass){
+        btn.style.display='none';
+        }else if(type.email == valeur2.email && type.pass == valeur2.pass){
+            add.style.display='none'
+        }
+      }
+    </script>
 
 <!--<script src="../js/ajouer-utilisateur.js"></script>-->
 </body>

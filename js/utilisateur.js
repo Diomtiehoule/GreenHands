@@ -1,7 +1,7 @@
 
-let delet = document.querySelector('.right')
-let modif =  document.querySelector(".left")
-let elem = document.querySelector('.attribut')
+let delet = document.querySelectorAll('.right')
+let modif =  document.querySelectorAll(".left")
+let elem = document.querySelectorAll('.attribut')
 
 
 delet.forEach(key=>{

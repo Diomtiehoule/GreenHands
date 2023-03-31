@@ -97,16 +97,40 @@
         </div>
     </div>
     
-    <div class="array">
+    <div class="array" id="array">
 
-        <div class="attribut">
+        <div class="attribut" id="attributs">
             <p id="id">Travailleurs</h1>
-            <p id="user">Nbr tache</p>
+            <!-- <p id="user">Nbr tache</p> -->
             <p id="contact">Tache(s)</p>
             <p class="renumeration">Types de renumeration</p>
-            <p id="count">Etat</p>
+            <p id="action">Etat</p>
         </div> 
 
+        <section id="form_user">
+
+            <h2>Etat de la Tache</h2>
+            <form action="">
+    
+            <div class="single_input">
+                <input type="text" name="nom" class="user" id="nomUser" placeholder=" Nom travailleur">
+            </div>
+            
+            <div class="single_input">
+                <input type="text" name="taches" class="taske" id="taskes" placeholder="Tache">
+            </div>
+    
+            
+            <div class="single_input">
+                <input type="text" name="renumeration" class="remun" id="remuns" placeholder="Type de remuneration">
+            </div>
+    
+            <div class="button">
+                <button class="button" id="submit" type="button">Resultat tache</button>
+            </div>
+        </form>
+    
+        </section>
         <!--<div class="attributs">
             <p id="Noms">Konan Yves Matt</h1>
             <p id="nbrsTaskes">2</p>
@@ -142,13 +166,32 @@
 
     <div class="border2"></div>
 
-    <div class="registerUser" class="addUser">
+    <div class="registerUser" class="addUser"  onclick="formToggle();">
         <button id="button">
             Inscrire un utilisateur
         </button> 
     </div>
 
+    <!-- <script>
+        function formToggle(){
+            const formTog = document.querySelector('#form_user')
 
-    <script src="../js/ajouer-utilisateur.js"></script>
+            formTog.classList.toggle('active')
+            }
+    </script> -->
+    <script>
+        const btn = document.getElementById('button')
+        const add = document.getElementById('admin')
+         if(sessionStorage.session){
+        const valeur = JSON.parse(localStorage.superAdmin);
+        const valeur2 = JSON.parse(localStorage.admin)
+        const type = JSON.parse(sessionStorage.session)
+        if(type.email == valeur.email && type.pass == valeur.pass){
+        btn.style.display='none';
+        }else if(type.email == valeur2.email && type.pass == valeur2.pass){
+            add.style.display='none'
+        }
+      }
+    </script>
 </body>
 </html>

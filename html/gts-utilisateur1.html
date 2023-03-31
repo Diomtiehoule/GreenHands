@@ -89,7 +89,7 @@
 
     <div class="listElement">
         <p>Liste travailleurs</p>
-        <p><a href="../html/gts-utilisateur2.html"> Liste des administrateurs</p></a>
+        <p id="admin"><a href="../html/gts-utilisateur2.html"> Liste des administrateurs</p></a>
     </div>
     <div class="border"></div>
     
@@ -146,8 +146,35 @@
             formTog.classList.toggle('active')
             }
     </script>
+       <script src="../js/ajouer-utilisateur.js"></script>
+       <script src="../js/utilisateur.js"></script>
+    <script>
+        const btn = document.getElementById('button')
+        const add = document.getElementById('admin')
+        const del = document.querySelectorAll('.right')
+        const mod = document.querySelectorAll('.left')
+        const action = document.getElementById('action')
+         if(sessionStorage.session){
+        const valeur = JSON.parse(localStorage.superAdmin);
+        const valeur2 = JSON.parse(localStorage.admin)
+        const type = JSON.parse(sessionStorage.session)
+        if(type.email == valeur.email && type.pass == valeur.pass){
+           btn.style.display='none';
+            console.log(del)
+            console.log(mod)
+        //    del.forEach(key => key.style.display='none')
+        //    mod.forEach(key => key.style.display='none')
+        //    action.style.display='none'
+           
+           del.style.display='none'
+        }else if(type.email == valeur2.email && type.pass == valeur2.pass){
+            add.style.display='none'
+        }
+      }
+    </script>
     <script src="../js/login.js"></script>
-    <script src="../js/utilisateur.js"></script>
-    <script src="../js/ajouer-utilisateur.js"></script>
+ 
+ 
+    <!-- <script src="../js/etat.js"></script> -->
 </body>
 </html>

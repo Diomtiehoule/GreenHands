@@ -109,3 +109,13 @@ var options = {
 //     }]
 //   }
 // })
+
+
+
+if(sessionStorage.session){
+  const valeur = JSON.parse(localStorage.superAdmin);
+  const type = JSON.parse(sessionStorage.session)
+  if(type.email == valeur.email && type.pass == valeur.pass){
+    
+  }
+}

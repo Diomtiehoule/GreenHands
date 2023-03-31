@@ -76,9 +76,7 @@
             <input type="text" name="taches" class="taske" id="taskes" placeholder="Tache(s) effectuée(s)">
         </div>
 
-        <input type="text" name="taches" class="taske" id="taskes" placeholder="Tache(s) effectuée(s)">
-        </div>
-
+        
         <div class="single_input">
             <input type="text" name="renumeration" class="remun" id="remuns" placeholder="Somme a versé">
         </div>
@@ -159,5 +157,21 @@
     <script src="../js/login.js"></script>
     <script src="../js/utilisateur.js"></script>
     <script src="../js/compta.js"></script>
+    <script>
+        const btn = document.getElementById('button')
+        const add = document.getElementById('admin')
+        const del = document.querySelectorAll('left')
+         if(sessionStorage.session){
+        const valeur = JSON.parse(localStorage.superAdmin);
+        const valeur2 = JSON.parse(localStorage.admin)
+        const type = JSON.parse(sessionStorage.session)
+        if(type.email == valeur.email && type.pass == valeur.pass){
+        btn.style.display='none';
+        del.style.display='none'
+        }else if(type.email == valeur2.email && type.pass == valeur2.pass){
+            add.style.display='none'
+        }
+      }
+    </script>
 </body>
 </html>
