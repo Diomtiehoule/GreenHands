@@ -161,6 +161,9 @@
         const btn = document.getElementById('button')
         const add = document.getElementById('admin')
         const del = document.querySelectorAll('left')
+        const user = document.getElementById('nomSession')
+        const email = document.getElementById('emailSession')
+        const use = document.getElementById('utilisateur')
          if(sessionStorage.session){
         const valeur = JSON.parse(localStorage.superAdmin);
         const valeur2 = JSON.parse(localStorage.admin)
@@ -169,7 +172,9 @@
         btn.style.display='none';
         del.style.display='none'
         }else if(type.email == valeur2.email && type.pass == valeur2.pass){
-            add.style.display='none'
+            user.innerHTML = 'Diomande K';
+            email.innerHTML = 'DiomKarim@gmail.com'
+            use.innerHTML = 'Diomande K'
         }
       }
     </script>

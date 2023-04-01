@@ -111,7 +111,7 @@
                     <div class="right"  id="right2">supprimer</div>
                 </div>
             </p>
-        </div>
+        </div>--
 
         <div class="attributs"  id="attribut3">
             <p id="users3">anogo Abou</p>
@@ -150,10 +150,6 @@
         <div class="single_input">
             <input type="email" name="email" class="email" id="emailAdmin" placeholder="email administrateur">
         </div>
-        
-        <div class="single_input">
-            <input type="password" name="pass" class="pass" id="passAdmin" placeholder="mot de passe de l'administrateur">
-        </div>
 
         <div class="button">
             <button class="button" id="submit" type="button">envoyer</button>
@@ -169,20 +165,27 @@
             formTog.classList.toggle('active')
             }
     </script>
-     <script>
-        const btn = document.getElementById('button')
-        const add = document.getElementById('admin')
-         if(sessionStorage.session){
-        const valeur = JSON.parse(localStorage.superAdmin);
-        const valeur2 = JSON.parse(localStorage.admin)
-        const type = JSON.parse(sessionStorage.session)
-        if(type.email == valeur.email && type.pass == valeur.pass){
-        //    btn.style.display='none';
-        }else if(type.email == valeur2.email && type.pass == valeur2.pass){
-            add.style.display='none'
-        }
-      }
-    </script>
+        <script>
+            const btn = document.getElementById('button')
+            const add = document.getElementById('admin')
+            const del = document.querySelectorAll('left')
+            const user = document.getElementById('nomSession')
+            const email = document.getElementById('emailSession')
+            const use = document.getElementById('utilisateur')
+             if(sessionStorage.session){
+            const valeur = JSON.parse(localStorage.superAdmin);
+            const valeur2 = JSON.parse(localStorage.admin)
+            const type = JSON.parse(sessionStorage.session)
+            if(type.email == valeur.email && type.pass == valeur.pass){
+            btn.style.display='none';
+            del.style.display='none'
+            }else if(type.email == valeur2.email && type.pass == valeur2.pass){
+                user.innerHTML = 'Diomande K';
+                email.innerHTML = 'DiomKarim@gmail.com'
+                use.innerHTML = 'Diomande K'
+            }
+          }
+        </script>
     <script src="../js/administrateur.js"></script>
     <script src="../js/utilisateur.js"></script>
 </body>

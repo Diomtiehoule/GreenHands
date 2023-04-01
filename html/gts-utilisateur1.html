@@ -21,7 +21,7 @@
             <div class="profilUser" onclick="menuToggle();">
                 <i class="fa-regular fa-user"></i>
             </div>
-        <p>Zack Leroi</p>
+        <p id="utilisateur">Zack Leroi</p>
         </div>
     </header>
 
@@ -148,27 +148,24 @@
     </script>
        <script src="../js/ajouer-utilisateur.js"></script>
        <script src="../js/utilisateur.js"></script>
-    <script>
+       <script>
         const btn = document.getElementById('button')
         const add = document.getElementById('admin')
-        const del = document.querySelectorAll('.right')
-        const mod = document.querySelectorAll('.left')
-        const action = document.getElementById('action')
+        const del = document.querySelectorAll('left')
+        const user = document.getElementById('nomSession')
+        const email = document.getElementById('emailSession')
+        const use = document.getElementById('utilisateur')
          if(sessionStorage.session){
         const valeur = JSON.parse(localStorage.superAdmin);
         const valeur2 = JSON.parse(localStorage.admin)
         const type = JSON.parse(sessionStorage.session)
         if(type.email == valeur.email && type.pass == valeur.pass){
-           btn.style.display='none';
-            console.log(del)
-            console.log(mod)
-        //    del.forEach(key => key.style.display='none')
-        //    mod.forEach(key => key.style.display='none')
-        //    action.style.display='none'
-           
-           del.style.display='none'
+        btn.style.display='none';
+        del.style.display='none'
         }else if(type.email == valeur2.email && type.pass == valeur2.pass){
-            add.style.display='none'
+            user.innerHTML = 'Diomande K';
+            email.innerHTML = 'DiomKarim@gmail.com'
+            use.innerHTML = 'Diomande K'
         }
       }
     </script>

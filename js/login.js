@@ -14,12 +14,6 @@ submit_button.onclick = (e) => {
         pass : pass
     }
     const dataAdmin = localStorage.getItem('administrateur');
-    
-//  localStorage.setItem('email', email)
-//  localStorage.setItem('password', pass)
-
-//  localStorage.getItem('email')
-//  localStorage.getItem('password')
 
  let  superAdmin = {
      email : 'ZackLeroi12@gmail.com',
@@ -40,23 +34,18 @@ submit_button.onclick = (e) => {
         swal("Ops...", "veuillez saisir tout les champs", "error");
     }else if(email == "" || pass == ""){
         swal("Ops...", "veuillez remplir le champs", "error");
-    }else if(email == superAdmin.email && pass == superAdmin.pass || email == admin.email && pass == admin.pass) {
+    }else if(email == superAdmin.email && pass == superAdmin.pass) {
         sessionStorage.setItem('session', JSON.stringify(obj))
-
-       
-    
-        
-        swal("Authentification confirmée", "Bienvenue super admin", "success");
-
+        swal("Authentification confirmée", "Bienvenue super administrateur", "success");
         window.location.replace("Tableau de bord.html");
 
-        button_register.style.display = 'none';
+    }else if(email == admin.email && pass == admin.pass){
+        sessionStorage.setItem('session', JSON.stringify(obj))
+        swal("Authentification confirmée", "Bienvenue administrateur", "success");
+        window.location.replace("Tableau de bord.html");
 
-    }else if( email != superAdmin.email || pass != superAdmin.pass){
+    } else if( email != superAdmin.email || pass != superAdmin.pass){
         swal("Ops...", "Utilisateur inconnu", "error");
         
     }
 }
- function superAdminZone(){
-    
- }
